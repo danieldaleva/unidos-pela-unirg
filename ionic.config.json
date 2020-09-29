@@ -1,0 +1,7 @@
+{
+  "name": "unidos-pela-unirg",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
