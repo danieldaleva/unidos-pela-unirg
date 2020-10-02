@@ -1,0 +1,492 @@
+@import "./variables.scss";
+@import "./fonts.scss";
+@import "./backgrounds.scss";
+
+* {
+  box-sizing: border-box;
+  letter-spacing: 0.05rem;
+}
+
+body {
+  background: var(--white);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+ion-button {
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.5));
+}
+
+ion-card {
+  border-radius: 0;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ion-fab {
+  opacity: 0.7
+}
+
+
+.menu-toggle {
+  filter: none;
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  display: none;
+
+  @media only screen and (max-width: 768px) {
+    display: block !important;
+  }
+}
+
+.menu-close {
+  filter: none;
+  --background: transparent;
+  position: absolute;
+  left: 0;
+  color: var(--brand-color-1)
+}
+
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 8;
+  background: var(--black);
+  opacity: 0.3;
+  display: none;
+}
+
+.show-backdrop {
+  display: block;
+}
+
+.hide-backdrop {
+  display: none;
+}
+
+// HEADER
+
+logo,
+.navbar-brand {
+  width: 120px;
+  @media only screen and (max-width: 1024px) {
+    width: 90px;
+  }
+  float: right;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  float: left;
+  text-transform: uppercase;
+
+  .nav-item {
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 1024px) {
+      height: 50px;
+    }
+  }
+
+  .nav-link {
+    @media only screen and (max-width: 1024px) {
+      font-size: 14px;
+    }
+  }
+
+  a {
+    color: var(--white);
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    color: var(--brand-color-3-tint);
+  }
+
+  .active {
+    color: var(--brand-color-3-tint);
+    font-weight: bold;
+  }
+}
+
+.mobile-menu {
+  display: none !important;
+  position: absolute !important;
+  background: var(--ion-color-light);
+  flex-direction: column;
+  z-index: 100;
+  margin: 0 18px 0 3px;
+  padding: -1.5rem 0rem;
+
+  .nav {
+    margin-top: 69px;
+  }
+
+  li {
+    display: block;
+    width: 100%;
+    height: 45px !important;
+
+    a {
+      color: var(--brand-color-1);
+    }
+  
+  }
+
+  li:hover, 
+  li:active,
+  li:focus {
+    a {
+      color: var(--brand-color-3-tint);
+    }
+  }
+
+
+}
+
+.show-menu {
+  display: flex !important;
+}
+
+.hide-menu {
+  display: none !important;
+}
+
+// CONTENT //
+
+main {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+section {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  max-width: none;
+  height: fit-content;
+
+  ul {
+    padding: 0 20px 20px 20px;
+  }
+
+  li {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 1.4rem;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 16px;
+  }
+
+  h3 {
+    padding: 24px 18px 12px 18px;
+    margin-bottom: 30px;
+    width: fit-content;
+    text-align: left;
+
+    @media only screen and (min-width: 1px) and (max-width: 768px) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+.text-block {
+  padding-bottom: 40px;
+  padding: 0 24px 36px 24px;
+}
+
+.slide {
+  background: var(--ion-color-dark);
+  min-height: calc(100vh - 90px);
+
+  @media only screen and (max-width: 1024px) {
+    min-height: calc(100vh - 69px);
+  }
+
+  h2 {
+    filter: drop-shadow(2px 4px 7px rgba(0, 0, 0, 0.8));
+    font-size: 3.5rem;
+
+    @media only screen and (max-width: 300px) {
+      font-size: 1.4rem;
+    }
+
+    @media only screen and (min-width: 301px) and (max-width: 500px) {
+      font-size: 2rem;
+    }
+
+    @media only screen and (min-width: 501px) and (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+      font-size: 3rem;
+    }
+  }
+}
+
+// Slide //
+
+.slide-1 {
+  background: url(/assets/img/hero-1.png);
+  background-size: cover;
+  background-position-y: -50px;
+  background-position-x: center;
+  color: var(--white);
+  text-align: left;
+  display: flex;
+  align-items: flex-end;
+  .hero-text-block {
+    margin-bottom: 140px;
+  }
+}
+
+.hero-footer {
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  z-index: 7;
+  background: var(--white);
+  width: 100%;
+  border-top: 10px solid var(--brand-color-1);
+  color: var(--brand-color-1);
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+
+  @media only screen and (max-width: 300px) {
+    font-size: 1rem;
+  }
+
+  @media only screen and (min-width: 301px) and (max-width: 500px) {
+    font-size: 1.4rem;
+  }
+
+  @media only screen and (min-width: 501px) and (max-width: 768px) {
+    font-size: 2.2rem;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    font-size: 2.8rem;
+  }
+
+  .v-icon {
+    width: 105px;
+    position: absolute;
+    top: -35px;
+    margin-left: -23px;
+  }
+
+  .text-2 {
+    margin-left: 38px;
+  }
+}
+
+// PLAN
+#plan,
+#plan .text-block {
+  min-height: calc(98vh - 90px);
+  @media only screen and (max-width: 1024px) {
+    min-height: calc(98vh - 69px);
+  }
+}
+
+#plan {
+  // border-top: 10px solid var(--brand-color-4);
+  background-image: url(/assets/img/bg-plan.png);
+  background-color: var(--brand-color-1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+  overflow: hidden;
+
+  @media only screen and (max-width: 768px) {
+    background-position: -300px top;
+  }
+
+  .text-block {
+    padding-bottom: 40px;
+    padding: 0 24px 36px 24px;
+    background: linear-gradient(
+      180deg,
+      rgba(34, 83, 162, 0.1) 0%,
+      rgba(34, 83, 162, 0.8) 20%
+    );
+
+    h3 {
+      background: var(--brand-color-1);
+      color: var(--white);
+    }
+
+    p,
+    ul {
+      color: var(--white);
+      filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.9));
+    }
+
+    @media only screen and (min-width: 1025px) {
+      width: 60%;
+    }
+  }
+}
+
+#team {
+  // border-top: 10px solid var(--brand-color-5);
+  background-color: var(--white-b);
+
+  .text-block {
+    padding-bottom: 40px;
+
+    h3 {
+      background: var(--brand-color-1);
+      color: var(--white);
+    }
+  }
+  ion-card {
+    margin-bottom: 20px;
+    color: var(--black-b);
+  }
+
+  .team-block {
+    width: 100%;
+    height: 100%;
+    ion-row,
+    ion-col {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .team-quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 24px !important;
+    height: 150px;
+    color: var(--black-b);
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.6rem;
+    border-top: 1px solid var(--white-c);
+    padding: 0;
+    margin: 0;
+  }
+
+  .team-photo {
+    float: left;
+    width: 40%;
+    width: 100%;
+
+    img {
+      border-bottom: 10px;
+      border-top: 0px;
+      border-left: 0px;
+      border-right: 0px;
+      border-style: solid;
+    }
+  }
+
+  .team-border-1 img {
+    border-color: var(--brand-color-1);
+  }
+
+  .team-border-2 img {
+    border-color: var(--brand-color-2);
+  }
+
+  .team-border-3 img {
+    border-color: var(--brand-color-3);
+  }
+
+  .team-border-4 img {
+    border-color: var(--brand-color-4);
+  }
+
+  .team-border-5 img {
+    border-color: var(--brand-color-5);
+  }
+
+  .team-info {
+    float: right;
+    width: 60%;
+    padding: 24px 24px 0 24px !important;
+    font-size: 15px;
+
+    .team-name {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .team-position {
+      font-size: 17px;
+    }
+
+    span {
+      line-height: 1.9;
+    }
+    ul li {
+      font-size: 15px;
+      line-height: 1.8;
+    }
+  }
+}
+
+#footer {
+  min-height: 120px;
+  background-color: var(--brand-color-1);
+  .content-block {
+    padding: 24px;
+    min-height: 120px;
+    display: flex;
+    align-items: flex-end;
+    color: var(--white-b);
+  }
+}

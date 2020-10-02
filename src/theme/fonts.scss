@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 100;
+    src: url('/assets/fonts/lato-hairline.woff2') format('woff2'), ;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/assets/fonts/lato-light.woff2') format('woff2'), ;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/assets/fonts/lato-regular.woff2') format('woff2'), ;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/lato-bold.woff2') format('woff2'), ;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/assets/fonts/lato-black.woff2') format('woff2'), ;
+}
+
+
+/* Italic */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 100;
+    src: url('/assets/fonts/lato-hairlineitalic.woff2') format('woff2'), ;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 300;
+    src: url('/assets/fonts/lato-lightitalic.woff2') format('woff2'), ;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 500;
+    src: url('/assets/fonts/lato-italic.woff2') format('woff2'), ;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 700;
+    src: url('/assets/fonts/lato-bolditalic.woff2') format('woff2'), ;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 900;
+    src: url('/assets/fonts/lato-blackitalic.woff2') format('woff2'), ;
+}
+
+small {
+  font-size: 14px;
+}
+
+.hairline {
+  font-weight: 100 !important;
+}
+
+.light {
+  font-weight: 300 !important;
+}
+
+.regular {
+  font-weight: 500 !important;
+}
+
+.bold {
+  font-weight: 700 !important;
+}
+
+.black {
+  font-weight: 900 !important;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.brand-color-1 {
+  color: var(--brand-color-1) !important;
+}
+
+.brand-color-1-shade {
+  color: var(--brand-color-1-shade) !important;
+}
+
+.brand-color-1-tint {
+  color: var(--brand-color-1-tint) !important;
+}
+
+.brand-color-2 {
+  color: var(--brand-color-2) !important;
+}
+
+.brand-color-3 {
+  color: var(--brand-color-3) !important;
+}
+
+.brand-color-4 {
+  color: var(--brand-color-4) !important;
+}
+
+.brand-color-5 {
+  color: var(--brand-color-5) !important;
+}
+
+.light {
+  color: var(--ion-color-light) !important;
+}
+
+.white {
+  color: var(--white) !important;
+}
+
+.medium {
+  color: var(--ion-color-medium) !important;
+}
+
+.dark {
+  color: var(--ion-color-dark) !important;
+}
+
+.danger {
+  color: var(--ion-color-danger) !important;
+}
+
+:root {
+  --ion-font-family: 'Lato'
+}

@@ -1,0 +1,49 @@
+/*** Backgrounds ***/
+.transparent {
+    --background: transparent !important;
+}
+
+.bg-brand-color-1 {
+    background: var(--brand-color-1) !important;
+}
+
+.bg-brand-color-1-shade {
+    background: var(--brand-color-1-shade) !important;
+}
+
+.bg-brand-color-1-tint {
+    background: var(--brand-color-1-tint) !important;
+}
+
+.bg-brand-color-2 {
+    background: var(--brand-color-2) !important;
+}
+
+.bg-brand-color-3 {
+    background: var(--brand-color-3) !important;
+}
+
+.bg-brand-color-4 {
+    background: var(--brand-color-4) !important;
+}
+
+.bg-brand-color-5 {
+    background: var(--brand-color-5) !important;
+}
+
+.bg-light {
+    background: var(--ion-color-light) !important;
+}
+
+.bg-white {
+    background: var(--white) !important;
+}
+
+.bg-medium {
+    background: var(--ion-color-medium) !important;
+}
+
+.bg-dark {
+    background: var(--ion-color-dark) !important;
+}
+
