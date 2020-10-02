@@ -140,6 +140,21 @@ const Home: React.FC = () => {
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
+
+  const w: any = window;
+  const gtag = w?.gtag || [];
+
+  const getAnalytics = () => {
+      gtag('event', 'click', { 
+        'event_category': 'download',
+        'event_label': 'site-plan-download-button'
+      });
+  }
+
+
+  document.getElementById('download')?.addEventListener("click", getAnalytics);
+
+
   return (
     <IonPage>
       <IonHeader className="bg-brand-color-1">
