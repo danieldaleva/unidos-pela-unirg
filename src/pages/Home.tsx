@@ -348,6 +348,7 @@ const Home: React.FC = () => {
                 <li>06 propostas para o Eixo - Infraestrutura Física</li>
               </ul>
               <IonButton
+                id="download"
                 mode="ios"
                 color="tertiary"
                 onClick={() => downloadFile()}
