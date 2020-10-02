@@ -145,12 +145,11 @@ const Home: React.FC = () => {
   const gtag = w?.gtag || [];
 
   const getAnalytics = () => {
-      gtag('event', 'click', { 
-        'event_category': 'download',
-        'event_label': 'site-plan-download-button'
-      });
+    gtag('event', 'click', {
+      'event_category': 'download',
+      'event_label': 'site-plan-download-button'
+    });
   }
-
 
   document.getElementById('download')?.addEventListener("click", getAnalytics);
 
@@ -187,7 +186,7 @@ const Home: React.FC = () => {
               >
                 <IonIcon icon={close} />
               </IonButton>
-              
+
             }
 
             <ul className="nav">
@@ -238,7 +237,9 @@ const Home: React.FC = () => {
               </li>
             </ul>
           </nav>
-          <a className="logo top navbar-brand" href="/home">
+          <a className="logo top navbar-brand"
+            onClick={() => menuSelection(menuActive[0])}
+            href="/home#">
             <img
               src="assets/logo/logo-negative.svg"
               alt="Logo Unidos pela Unirg"
@@ -250,21 +251,23 @@ const Home: React.FC = () => {
       <div
         onClick={() => menuToggle()}
         className={
-        menuOpen ?
-          'backdrop show-backdrop' :
-          'backdrop hide-backdrop'}>
+          menuOpen ?
+            'backdrop show-backdrop' :
+            'backdrop hide-backdrop'}>
       </div>
 
       { scrollTop > 60 &&
-        <IonFab
-          onClick={() => scrollToTop()}
-          vertical="bottom" horizontal="end" slot="fixed">
-          <IonFabButton color="tertiary">
-            <IonIcon icon={arrowUp} />
-          </IonFabButton>
-        </IonFab>
+        <div className="container">
+          <IonFab
+            onClick={() => scrollToTop()}
+            vertical="bottom" horizontal="end" slot="fixed">
+            <IonFabButton color="tertiary">
+              <IonIcon icon={arrowUp} />
+            </IonFabButton>
+          </IonFab>
+        </div>
       }
-      
+
       <IonContent
         scrollEvents={true}
         onIonScroll={(e) => handleScrollEvent(e)}
@@ -728,7 +731,7 @@ const Home: React.FC = () => {
                           e Tecnologias Sociais para produtor familiar, e em
                           pesquisa nas áreas de Plantas Medicinais, Fisiologia
                           Vegetal, Qualidade pós-colheita de frutas e
-                          olerícolas, e aproveitamento de resídu- os orgânicos.
+                          olerícolas, e aproveitamento de resíduos orgânicos.
                         </li>
                       </ul>
                     </IonCol>
