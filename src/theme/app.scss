@@ -53,7 +53,6 @@ ion-fab {
   opacity: 0.7
 }
 
-
 .menu-toggle {
   filter: none;
   position: absolute;
@@ -423,7 +422,6 @@ section {
   .team-photo {
     float: left;
     width: 40%;
-    width: 100%;
 
     img {
       border-bottom: 10px;
@@ -431,6 +429,7 @@ section {
       border-left: 0px;
       border-right: 0px;
       border-style: solid;
+      width: 100%;
     }
   }
 

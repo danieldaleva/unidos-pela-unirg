@@ -132,6 +132,7 @@ const Home: React.FC = () => {
   // Update Window Dimensions
   const updateDimensions = () => {
     setWindowSize(window.innerWidth);
+    if (window.innerWidth > breakSize) setMenuOpen(false);
   };
 
   useEffect(() => {
@@ -161,14 +162,18 @@ const Home: React.FC = () => {
             }
           >
 
-            <IonButton
-              color="light"
-              mode="ios"
-              className="menu-close"
-              onClick={() => menuToggle()}
-            >
-              <IonIcon icon={close}/>
-            </IonButton>
+            {
+              windowSize <= breakSize &&
+              <IonButton
+                color="light"
+                mode="ios"
+                className="menu-close"
+                onClick={() => menuToggle()}
+              >
+                <IonIcon icon={close} />
+              </IonButton>
+              
+            }
 
             <ul className="nav">
               {
