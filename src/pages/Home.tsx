@@ -29,21 +29,18 @@ const menuList = [
     id: "menu-start",
     section: "start",
     desc: "Início",
-    href: "/home#",
     active: true,
   },
   {
     id: "menu-plan",
     section: "plan",
     desc: "Plano de Gestão",
-    href: "/home#",
     active: false,
   },
   {
     id: "menu-team",
     section: "team",
     desc: "Nossa Equipe",
-    href: "/home#",
     active: false,
   },
 ];
@@ -153,6 +150,10 @@ const Home: React.FC = () => {
 
   document.getElementById('download')?.addEventListener("click", getAnalytics);
 
+  const goHome = (e: any) => {
+    e.preventDefault();
+    menuSelection(menuActive[0]);
+  }
 
   return (
     <IonPage>
@@ -195,10 +196,10 @@ const Home: React.FC = () => {
                   <li
                     className="nav-item"
                     key={menu.id}
-                    onClick={() => menuSelection(menu)}
+                    onClick={(e) => { e.preventDefault(); menuSelection(menu); }}
                   >
                     <a
-                      href={menu.href}
+                      href="/"
                       className={menu.active ? "nav-link active" : "nav-link"}
                       id={menu.id}
                     >
@@ -238,8 +239,9 @@ const Home: React.FC = () => {
             </ul>
           </nav>
           <a className="logo top navbar-brand"
-            onClick={() => menuSelection(menuActive[0])}
-            href="/home#">
+            href="/"
+            onClick={(e) => goHome(e)}
+          >
             <img
               src="assets/logo/logo-negative.svg"
               alt="Logo Unidos pela Unirg"
